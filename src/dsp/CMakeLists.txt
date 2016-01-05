@@ -36,6 +36,8 @@ add_source_files(SRCS_LIST
 	rx_demod_am.h
 	rx_demod_fm.cpp
 	rx_demod_fm.h
+	rx_demod_p25.cpp
+	rx_demod_p25.h
 	rx_fft.cpp
 	rx_fft.h
 	rx_filter.cpp

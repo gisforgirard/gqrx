@@ -1024,6 +1024,14 @@ void MainWindow::selectDemod(int mode_idx)
         click_res = 10;
         break;
 
+        /* P25 digital */
+    case DockRxOpt::MODE_P25:
+        rx->set_demod(receiver::RX_DEMOD_P25);
+        ui->plotter->setDemodRanges(-12500, -100, 100, 12500, true);
+        uiDockAudio->setFftRange(0,24000);
+        click_res = 6250;
+        break;
+
     default:
         qDebug() << "Unsupported mode selection (can't happen!): " << mode_idx;
         flo = -5000;

@@ -41,7 +41,8 @@ static const int filter_preset_table[DockRxOpt::MODE_LAST][3][2] =
     {{    100,   4000}, {   100,  2800}, {   200,  1600}},  // MODE_USB
     {{   2500,    -50}, { -1200,  -200}, {  -900,  -400}},  // MODE_CWL
     {{     50,   2500}, {   200,  1200}, {   400,   900}},  // MODE_CWU
-    {{-100000, 100000}, {-80000, 80000}, {-60000, 60000}}   // MODE_WFM_STEREO_OIRT
+    {{-100000, 100000}, {-80000, 80000}, {-60000, 60000}},  // MODE_WFM_STEREO_OIRT
+    {{  -8000,   8000}, { -6250,  6250}, { -5000,  5000}},  // MODE_P25
 };
 
 DockRxOpt::DockRxOpt(qint64 filterOffsetRange, QWidget *parent) :
@@ -66,6 +67,7 @@ DockRxOpt::DockRxOpt(qint64 filterOffsetRange, QWidget *parent) :
         ModulationStrings.append("CW-L");
         ModulationStrings.append("CW-U");
         ModulationStrings.append("WFM (oirt)");
+        ModulationStrings.append("P25");
     }
     ui->modeSelector->addItems(ModulationStrings);
 

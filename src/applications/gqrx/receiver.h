@@ -87,7 +87,8 @@ public:
         RX_DEMOD_WFM_M = 4,  /*!< Frequency modulation (wide, mono). */
         RX_DEMOD_WFM_S = 5,  /*!< Frequency modulation (wide, stereo). */
         RX_DEMOD_WFM_S_OIRT = 6,  /*!< Frequency modulation (wide, stereo oirt). */
-        RX_DEMOD_SSB   = 7   /*!< Single Side Band. */
+        RX_DEMOD_SSB   = 7,  /*!< Single Side Band. */
+        RX_DEMOD_P25   = 8   /*!< P25 digital. */
     };
 
     /** Supported receiver types. */

@@ -97,6 +97,7 @@ SOURCES += \
     src/dsp/rx_agc_xx.cpp \
     src/dsp/rx_demod_am.cpp \
     src/dsp/rx_demod_fm.cpp \
+    src/dsp/rx_demod_p25.cpp \
     src/dsp/rx_fft.cpp \
     src/dsp/rx_filter.cpp \
     src/dsp/rx_meter.cpp \
@@ -156,6 +157,7 @@ HEADERS += \
     src/dsp/rx_agc_xx.h \
     src/dsp/rx_demod_am.h \
     src/dsp/rx_demod_fm.h \
+    src/dsp/rx_demod_p25.h \
     src/dsp/rx_fft.h \
     src/dsp/rx_filter.h \
     src/dsp/rx_meter.h \
@@ -238,6 +240,9 @@ PKGCONFIG += gnuradio-analog \
              gnuradio-osmosdr
 
 INCPATH += src/
+
+# if op25
+LIBS += -lgnuradio-op25 -litpp
 
 unix:!macx {
     LIBS += -lboost_system$$BOOST_SUFFIX -lboost_program_options$$BOOST_SUFFIX
